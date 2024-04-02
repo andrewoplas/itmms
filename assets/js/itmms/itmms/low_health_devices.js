@@ -20,6 +20,10 @@ $(function ($) {
                     d.length = 9999;
                 },
                 dataSrc: function (response) {
+                    if(!response.data) {
+                        return [];
+                    }
+
                     const data = response.data.filter((device) => {
                         const { lowestHealthPercentage } = getLowestHealthPart(
                             device.parts
@@ -75,8 +79,8 @@ $(function ($) {
                     '<div class="processing-wrapper"> \
                                     <div><i class="fa fa-spinner fa-spin"></i> Fetching ... Please wait...</div> \
                                 </div>',
-                emptyTable: "No computer(s) available in the database!",
-                zeroRecords: "No computer found!",
+                emptyTable: "No device(s) available in the database!",
+                zeroRecords: "No device found!",
                 infoFiltered: "",
             },
         });
