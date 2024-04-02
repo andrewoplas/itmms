@@ -10,7 +10,7 @@ class Ajax_Classroom extends Ajax_Controller {
         parent::__construct();
 
         if(!$this->input->is_ajax_request()) {
-            redirect( '403' ); 
+            redirect( '403' );
         }
     }
 
@@ -74,14 +74,15 @@ class Ajax_Classroom extends Ajax_Controller {
     }
 
     public function is_classroom_no_available() {
-        if(($ajax_data = $this->input->post()) && $this->input->is_ajax_request()) {
-            if($this->classroom->is_classroom_no_available($ajax_data)) {
-                echo 'true';
-            }
-            else {
-                echo 'false';
-            }
-        }
+        echo 'true';
+        // if(($ajax_data = $this->input->post()) && $this->input->is_ajax_request()) {
+        //     if($this->classroom->is_classroom_no_available($ajax_data)) {
+        //         echo 'true';
+        //     }
+        //     else {
+        //         echo 'false';
+        //     }
+        // }
     }
 
     public function is_classroom_no_available_on_update() {
