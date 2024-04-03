@@ -8,7 +8,7 @@
             <div class="form-group">
                 <span class="col-sm-12 itmms-label">Room No.:<i class="fa fa-lock fg-gray pull-right padding-right5"></i></span>
                 <div class="col-lg-12">
-                    <input type="text" class="form-control" name="room_no" id="room_no" placeholder="e.g. ST101">
+                    <input type="text" class="form-control" name="room_no" id="room_no" placeholder="e.g. ST101" readonly>
                 </div>
             </div>
             <div class="form-group">

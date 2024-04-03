@@ -199,15 +199,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="classroom-report" title="Classroom Report">
+                        <a href="classroom-report" title="Room Report">
                             <i class='fa fa-university'></i>
-                            Classroom
+                            Room
                         </a>
                     </li>
                     <li>
-                        <a href="cluster-report" title="Cluster Report">
+                        <a href="cluster-report" title="Department/Office Report">
                             <i class='fa fa-location-arrow'></i>
-                            Offices
+                            Department/Office
                         </a>
                     </li>
                 </ul>
