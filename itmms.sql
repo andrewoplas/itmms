@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: itmms
--- Generation Time: 2024-04-01 22:50:09.6150
+-- Generation Time: 2024-04-03 09:02:04.4080
 -- -------------------------------------------------------------
 
 
@@ -114,8 +114,7 @@ CREATE TABLE `rooms` (
   `room_id` int(11) NOT NULL AUTO_INCREMENT,
   `room_no` varchar(255) NOT NULL,
   `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`room_id`),
-  UNIQUE KEY `room_no` (`room_no`)
+  PRIMARY KEY (`room_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 DROP TABLE IF EXISTS `service_order`;
@@ -200,7 +199,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 INSERT INTO `users` (`id`, `emp_id`, `password`, `firstname`, `lastname`, `user_type`, `access_rights`, `cluster_id`, `avatar`, `status`, `contact_no`, `last_login`, `if_pass_changed`, `date_added`) VALUES
-(1, 'CIT1041', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Jonathan ', 'Pacana', 'superadmin', 'ultimate_control', '1', 'assets/images/avatars/default_profile.png', 'active', '111', '2024-04-01 16:49:22', 0, '2018-02-16 22:49:27'),
+(1, 'CIT1041', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Jonathan ', 'Pacana', 'superadmin', 'ultimate_control', '1', 'assets/images/avatars/default_profile.png', 'active', '111', '2024-04-03 01:52:44', 0, '2018-02-16 22:49:27'),
 (2, 'CIT101', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Tsg', 'Test', 'viewer', 'view', '1', 'assets/images/avatars/default_profile.png', 'active', '111', '2024-03-16 12:08:20', 0, '2016-10-18 04:52:40'),
 (3, 'CIT123', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Ethan', 'Pacana', 'encoder', 'add', '1', 'assets/images/avatars/default_profile.png', 'active', '111', '2024-03-16 12:07:53', 0, '2020-03-03 19:10:40'),
 (4, 'CIT1318', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Bebeth', 'Ricardel', 'encoder', 'add', '2', 'assets/images/avatars/default_profile.png', 'active', '178', NULL, 0, '2024-03-14 10:49:57'),
