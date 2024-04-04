@@ -35,14 +35,11 @@
                 <div class="panel <?php echo $panel_color ?> ">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-xs-2">
+                            <div class="col-xs-12 text-center">
                                 <i class="fa <?php echo $icon ?> fa-2x fg-dark"></i>
                             </div>
-                            <div class="col-xs-8 text-right">
-                                <div class="large"><?php echo str_pad((string)($row->workstation_no), 2, '0', STR_PAD_LEFT) ?></div>
-                            </div>
-                            <div class="text-right" style="padding: 0 5px 0 0">
-                                <small><?php echo $row->computer_name ?></small>
+                            <div class="col-xs-12 text-center" style="margin-top: 0.5em">
+                                <div><?php echo $row->computer_name ?></div>
                             </div>
                         </div>
                     </div>
