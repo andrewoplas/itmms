@@ -338,10 +338,13 @@ class Computer_Model extends MY_Model{
         extract($data);
         $params = [];
 
-        $sql = 'SELECT DISTINCT c.computer_id, c.computer_name, c.computer_type, c.brand_clone_name, cd.designation, cd.assigned_to, cd.date_assigned,  so.computer_name so_computer_name ';
+        $sql = 'SELECT DISTINCT cr.cluster_id, cl.room_id AS cl_room_id, c.computer_id, c.computer_name, c.computer_type, c.brand_clone_name, CONCAT_WS("-", cl.cluster_code, cd.designation) AS designation, cd.assigned_to, cd.date_assigned,  so.computer_name so_computer_name ';
         $sql .= 'FROM computers c ';
         $sql .= 'LEFT JOIN computer_designation cd ON cd.computer_id = c.computer_id ';
         $sql .= 'LEFT JOIN service_order so ON so.computer_name = c.computer_name ';
+        $sql .= 'LEFT JOIN rooms r ON r.room_no = cd.designation ';
+        $sql .= 'LEFT JOIN classrooms cr ON cr.room_id = r.room_id ';
+        $sql .= 'LEFT JOIN clusters cl ON cl.room_id = cr.cluster_id ';
         $sql .= 'WHERE 1 ';
 
         if(!empty($search['value'])){
