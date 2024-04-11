@@ -808,7 +808,7 @@ class Service_Order_Model extends MY_Model{
             $sql .= 'OR c.brand_clone_name LIKE ? ';
             $sql .= 'OR cr.type LIKE ? ';
             $sql .= 'OR CONCAT_WS(\': \', cr.resource_name, so.complaint_details) LIKE ? ';
-            $sql .= 'OR CONCAT_WS(\' \', rb.firstname, rb.lastname) LIKE ? ';
+            // $sql .= 'OR CONCAT_WS(\' \', rb.firstname, rb.lastname) LIKE ? ';
             $sql .= 'OR CONCAT_WS(\' \', at.firstname, at.lastname) LIKE ? ';
             $sql .= 'OR CONCAT_WS(\' \', soa.date_reported, soa.time_reported) LIKE ? ';
             $sql .= 'OR CONCAT_WS(\' \', soc.date_finished, soc.time_finished) LIKE ? ';
@@ -829,7 +829,7 @@ class Service_Order_Model extends MY_Model{
 
         if(!empty($search['value'])){
             $params[] = $search['value'];
-            $params[] = '%' . $search['value'] . '%';
+            // $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
@@ -897,7 +897,7 @@ class Service_Order_Model extends MY_Model{
             $sql .= 'OR c.brand_clone_name LIKE ? ';
             $sql .= 'OR cr.type LIKE ? ';
             $sql .= 'OR CONCAT_WS(\': \', cr.resource_name, so.complaint_details) LIKE ? ';
-            $sql .= 'OR CONCAT_WS(\' \', rb.firstname, rb.lastname) LIKE ? ';
+            // $sql .= 'OR CONCAT_WS(\' \', rb.firstname, rb.lastname) LIKE ? ';
             $sql .= 'OR CONCAT_WS(\' \', at.firstname, at.lastname) LIKE ? ';
             $sql .= 'OR CONCAT_WS(\' \', soa.date_reported, soa.time_reported) LIKE ? ';
             $sql .= 'OR CONCAT_WS(\' \', soc.date_finished, soc.time_finished) LIKE ? ';
@@ -929,7 +929,7 @@ class Service_Order_Model extends MY_Model{
             $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
-            $params[] = '%' . $search['value'] . '%';
+            // $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
             $params[] = '%' . $search['value'] . '%';
