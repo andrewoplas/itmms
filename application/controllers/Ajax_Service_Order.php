@@ -121,10 +121,16 @@ class Ajax_service_order extends Ajax_Controller
 
                 $computer_parts = $this->computer->get_computer_parts_by_name($computer_name);
 
-                if($computer_parts) {
-                    if(isset($part_name) && $part_name) {
+                $data = $computer_parts;
+
+                $has_replaced_part = isset($part_name) && $part_name;
+
+                if ($computer_parts) {
+                    if ($has_replaced_part && strtolower($part_name) != 'computer set') {
                         foreach ($computer_parts as $cp) {
-                            if($cp->parts_type == 'Computer Set') {
+                            // Check if computer has 'computer set' part.
+                            // If it has, add the computer part payload.
+                            if (in_array(strtolower($cp->parts_type), ['computer set', "branded", "cloned"])) {
                                 $replaced_part_id = $this->computer->add_computer_part([
                                     'computer_id' => $cp->computer_id,
                                     'parts_name' => $part_name,
@@ -136,7 +142,9 @@ class Ajax_service_order extends Ajax_Controller
                                 break;
                             }
                         }
-                    } else {
+                    } else if (!$has_replaced_part || strtolower($part_name) == 'computer set') {
+                        // Update all parts if computer part payload is computer set
+                        // Or if replaced device is not computer set
                         $parts = [];
                         foreach ($computer_parts as $cp) {
                             $parts[] = [

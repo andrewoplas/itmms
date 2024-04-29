@@ -44,13 +44,13 @@
                     </div>
 
                     <?php
-                    $has_replacement = $row->parts_name == 'Computer Set' && $replaced_parts;
+                    $has_replacement = in_array(strtolower($row->parts_name), ['computer set', "branded", "cloned"]) && $replaced_parts;
                     $class = $has_replacement ? 'computer-set-chart' : '';
                     $data = $has_replacement ? json_encode($replaced_parts) : '';
                     ?>
 
                     <div class="panel-body">
-                        <canvas data-replaced-parts='<?= $data ?>' class="line-chart <?= $class ?>" height="<?= $row->parts_name == 'Computer Set' ? 100 : 70 ?>"></canvas>
+                        <canvas data-replaced-parts='<?= $data ?>' class="line-chart <?= $class ?>" height="<?= in_array(strtolower($row->parts_name), ['computer set', "branded", "cloned"]) ? 100 : 70 ?>"></canvas>
                     </div>
                 </div>
             </div>

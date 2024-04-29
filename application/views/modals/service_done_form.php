@@ -86,7 +86,7 @@
                         <option value="Processor">Processor</option>
                         <option value="RAM">RAM</option>
                         <option value="Video Card">Video Card</option>
-                        <option value="Printer">Printer</option>
+                        <option value="Computer Set">Computer Set</option>
                     </select>
                 </div>
             </div>
