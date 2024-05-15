@@ -1,6 +1,9 @@
 $(function ($) {
     var obj = {};
 
+    obj.sess_user_type = $("#user_type").text();
+    obj.sess_cluster_id = $("#user_cluster_id").text();
+
     obj.low_health_devices = $("#health-table")
         .on("init.dt", function () {
             tippy("[data-tippy-content]");
@@ -18,9 +21,13 @@ $(function ($) {
                 data: function (d) {
                     d.start = 0;
                     d.length = 9999;
+
+                    if (!["superadmin", "admin"].includes(obj.sess_user_type)) {
+                        d.cluster_id = obj.sess_cluster_id;
+                    }
                 },
                 dataSrc: function (response) {
-                    if(!response.data) {
+                    if (!response.data) {
                         return [];
                     }
 

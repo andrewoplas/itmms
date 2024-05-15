@@ -88,7 +88,7 @@ class MY_Controller extends CI_Controller {
         } else {
             show_404(strtolower(get_class($this)).'/'.$method);
         }
-        
+
         $this->_load_view();
     }
 
@@ -238,6 +238,7 @@ class MY_Controller extends CI_Controller {
     public function get_session_data() {
         $this->data['sess_id'] = $this->session->userdata('id');
         $this->data['sess_emp_id'] = $this->session->userdata('emp_id');
+        $this->data['sess_cluster_id'] = $this->session->userdata('cluster_id');
         $this->data['sess_firstname'] = $this->session->userdata('firstname');
         $this->data['sess_lastname'] = $this->session->userdata('lastname');
         $this->data['sess_user_type'] = $this->session->userdata('user_type');

@@ -1,4 +1,5 @@
 <div class="hidden" id="user_type"><?php echo $sess_user_type; ?></div>
+<div class="hidden" id="user_cluster_id"><?php echo $sess_cluster_id; ?></div>
 
 <div id="all-graphs">
     <div class="row" style="position: relative; top: 15px; z-index: 1">
