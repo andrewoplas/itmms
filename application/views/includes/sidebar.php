@@ -1,3 +1,6 @@
+<input type="hidden" name="user_type" value="<?php echo $sess_user_type; ?>" />
+<input type="hidden" name="user_cluster_id" value="<?php echo $sess_cluster_id; ?>" />
+
 <div class="sidebar-wrapper section-not-to-print" id="custom-sb-scollbar" style="height: 100%; padding-bottom: 150px">
     <ul id="sidebar_menu" class="sidebar-nav" style="width:500px;">
         <li class="sidebar-brand" id="sidebar-user">

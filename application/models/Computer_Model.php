@@ -370,7 +370,7 @@ class Computer_Model extends MY_Model
         $sql .= 'WHERE 1 ';
 
         if (!empty($cluster_id)) {
-            $sql .= 'AND cl.cluster_id = ? ';
+            $sql .= 'AND so.cluster_id = ? ';
         }
 
         if (!empty($search['value'])) {

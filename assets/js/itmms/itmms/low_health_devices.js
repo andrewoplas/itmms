@@ -1,8 +1,8 @@
 $(function ($) {
     var obj = {};
 
-    obj.sess_user_type = $("#user_type").text();
-    obj.sess_cluster_id = $("#user_cluster_id").text();
+    obj.sess_user_type = $("[name='user_type']").val();
+    obj.sess_cluster_id = $("[name='user_cluster_id']").val();
 
     obj.low_health_devices = $("#health-table")
         .on("init.dt", function () {
@@ -22,8 +22,11 @@ $(function ($) {
                     d.start = 0;
                     d.length = 9999;
 
-                    if (!["superadmin", "admin"].includes(obj.sess_user_type)) {
-                        d.cluster_id = obj.sess_cluster_id;
+                    if (
+                        !["superadmin", "admin"].includes(obj.sess_user_type) &&
+                        obj.sess_cluster_id
+                    ) {
+                        d.cluster_id = Number(obj.sess_cluster_id);
                     }
                 },
                 dataSrc: function (response) {
@@ -38,6 +41,8 @@ $(function ($) {
 
                         return lowestHealthPercentage <= 10;
                     });
+
+                    console.log("dta", data);
 
                     const count = data.length;
                     if (count > 0) {
