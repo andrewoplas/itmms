@@ -189,7 +189,7 @@ class Service_Order_Model extends MY_Model{
         extract($data);
 
         $data = array(
-                'designate_to'  =>  $designate_to
+                'assigned_to'  =>  $designate_to
             );
 
         $this->db->where( 'ref_no', $ref_no )
