@@ -128,6 +128,15 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="dataTable_wrapper">
+                    <select id="status" class="form-control input-sm form-control remove-outline">
+                        <option disabled selected>Status</option>
+                        <option value="">All</option>
+                        <option value="close">Resolved</option>
+                        <option value="under warranty">Replaced</option>
+                        <option value="repaired">Repaired</option>
+                        <option value="under repair">Under Repair</option>
+                    </select>
+
                     <table class="table table-hover table-bordered width100 text-break" id="pending_service">
                         <thead>
                             <tr>
