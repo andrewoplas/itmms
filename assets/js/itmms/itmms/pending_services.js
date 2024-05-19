@@ -74,8 +74,8 @@ $(function ($) {
                 '<div class="processing-wrapper"> \
                             <div><i class="fa fa-spinner fa-spin"></i> Fetching ... Please wait...</div> \
                         </div>',
-            emptyTable: "No services report available",
-            zeroRecords: "No pending services available!",
+            emptyTable: "No service reports available",
+            zeroRecords: "No service reports available",
             infoFiltered: "",
         },
     });
