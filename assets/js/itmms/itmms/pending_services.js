@@ -35,7 +35,7 @@ $(function ($) {
                     // resolved - green
 
                     if (row.unit_status == "under warranty") {
-                        return "<span class='label label-warning'>Replaced</span>";
+                        return "<span class='label label-info'>To Be Replaced</span>";
                     }
 
                     if (row.unit_status == "close") {
@@ -47,10 +47,10 @@ $(function ($) {
                     }
 
                     if (row.unit_status == "under repair") {
-                        return "<span class='label label-danger'>Under repair</span>";
+                        return "<span class='label label-danger'>Under Repair</span>";
                     }
 
-                    return `<span class='label label-danger'>${row.unit_status}</span>`;
+                    return `<span class='label label-default'>${row.unit_status}</span>`;
                 },
             },
         ],
