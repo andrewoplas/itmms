@@ -123,7 +123,7 @@
                     </span>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td colspan="3" valign="top"><span id="action_taken"></span></td>
                 <td style="border-left: 1px solid #000;">
                     &nbsp;&nbsp;<span style="width: 153px; display: inline-block">Item Under Warranty?</span>
@@ -136,7 +136,7 @@
                         </label>
                     </span>
                 </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td colspan="4"></td>
                 <td class="underline-top" ></td>
