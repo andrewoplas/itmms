@@ -323,7 +323,6 @@ $(function ($) {
             dataType: "json",
             data,
             success: function (response) {
-                console.log("response", response);
                 const data = response.data.filter((device) => {
                     const { lowestHealthPercentage } = getLowestHealthPart(
                         device.parts

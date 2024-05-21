@@ -30,10 +30,6 @@ $(function ($) {
                 targets: -2,
                 sortable: false,
                 render: function (data, type, row) {
-                    // under repaired - red
-                    // to be replaced - amber
-                    // resolved - green
-
                     if (row.unit_status == "under warranty") {
                         return "<span class='label label-info'>To Be Replaced</span>";
                     }

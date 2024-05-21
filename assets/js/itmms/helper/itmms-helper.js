@@ -244,11 +244,13 @@ function ajax_get_clusters() {
         success: function (result) {
             if (result instanceof Array) {
                 var $select = $("<option />");
-                $select.attr({
-                    "value": "",
-                    "disabled": "",
-                    "selected": "",
-                }).text("Select Department/Office");
+                $select
+                    .attr({
+                        value: "",
+                        disabled: "",
+                        selected: "",
+                    })
+                    .text("Select Department/Office");
 
                 $cluster_id.empty();
                 $cluster_id.append($select);
@@ -522,12 +524,20 @@ function getLowestHealthPart(parts) {
 
 function getUnitStatusDescription(unitStatus) {
     if (unitStatus == "under warranty") {
-        return "Replaced";
+        return "To Be Replaced";
     }
 
     if (unitStatus == "close") {
         return "Resolved";
     }
 
-    return "";
+    if (unitStatus == "repaired") {
+        return "Repaired";
+    }
+
+    if (unitStatus == "under repair") {
+        return "Under Repair";
+    }
+
+    return unitStatus;
 }
