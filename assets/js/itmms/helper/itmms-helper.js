@@ -197,7 +197,9 @@ function ajax_get_computer(cluster_id) {
                         .attr("value", result[index].computer_name)
                         .text(result[index].computer_name);
 
-                    groups[computer.designation_type].append($option);
+                    groups[computer.designation_type.toLowerCase()].append(
+                        $option
+                    );
                 });
 
                 Object.keys(groups).forEach((groupKey) => {
