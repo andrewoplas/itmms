@@ -15,6 +15,8 @@ $( function( $ ) {
         showInputs: false
     });
 
+    $('#computer_name').select2();
+
     obj.user_name = $('#user_name').text();
 
     $('.complaint').hide();
@@ -151,7 +153,8 @@ $( function( $ ) {
                 $('#cluster_id').val('');
                 $('#position').val('');
                 $('#contact_no').val('');
-                $('#computer_name').prop( 'selectedIndex', 0 );
+                $('#computer_name').val(null).trigger('change');
+                $('#computer_name').prop('disabled', false).empty().append('<option default value="">Not yet selected</option>');
                 $('#complaint_type').val('');
                 $('#new_complaint').val('');
                 $('#complaint_details').val('');

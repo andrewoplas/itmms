@@ -90,7 +90,7 @@
                     <div class="form-group">
                         <span class="col-lg-12 itmms-label">Assigned Name:</span>
                         <div class="col-lg-12">
-                            <select class="form-control" name="computer_name" id="computer_name"></select>
+                            <select class="form-control" name="computer_name" id="computer_name" style="width: 100%;"></select>
                         </div>
                     </div>
                 </td>
